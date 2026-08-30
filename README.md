@@ -26,6 +26,28 @@ Run it with:
 open "build/Release/InputPin.app"
 ```
 
+## Install in Applications
+
+Quit any running copy of InputPin, then copy the built application into `/Applications`:
+
+```zsh
+/usr/bin/ditto "build/Release/InputPin.app" "/Applications/InputPin.app"
+```
+
+If macOS reports a permission error, run the same command with administrator privileges:
+
+```zsh
+sudo /usr/bin/ditto "build/Release/InputPin.app" "/Applications/InputPin.app"
+```
+
+Launch the installed copy:
+
+```zsh
+open "/Applications/InputPin.app"
+```
+
+Use the copy in `/Applications` when enabling **Launch at Login**. After rebuilding InputPin, quit the running application and repeat the `ditto` command to update the installed copy.
+
 ## Usage
 
 - Click the microphone icon in the menu bar.
